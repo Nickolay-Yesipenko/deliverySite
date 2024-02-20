@@ -1,0 +1,150 @@
+* {
+  /*Очистка всех отступов, границ и рамок*/
+  margin: 0;
+  padding: 0;
+  border: 0;
+
+  /*Изменение подсчета ширины блока*/
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+
+  &:before, &:after {
+    /*Изменение подсчета ширины блока*/
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+}
+
+:focus, :active {
+  /*Убираем линии обводки у некоторых браузеров*/
+  outline: none;
+}
+
+a {
+  &:focus, &:active {
+    /*Убираем линии обводки у некоторых браузеров*/
+    outline: none;
+  }
+}
+
+nav, footer, header, aside {
+  /*Делаем блочными для удобства*/
+  display: block;
+}
+
+html, body {
+  /*Уравнивание повидения шрифтов для разных браузеров*/
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  font-size: 14px;
+  line-height: 1;
+  -ms-text-size-adjust: 100%;
+
+  /*Запрет увеличения шрифта на айфонах*/
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+input, button, textarea {
+  /*Включение наследования семейства шрифта*/
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+
+  &::-moz-focus-inner {
+    padding: 0;
+    border: 0;
+  }
+}
+
+a {
+  text-decoration: none;
+
+  &:visited, &:hover {
+    text-decoration: none;
+  }
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: inherit;
+  font-weight: 400;
+}
+
+
+/*Конец обнуляющего блока*/
+
+
+.block__row {
+  display: flex;
+  border: 20px solid #ece89d;
+  margin: 0 0 20px 0;
+  flex-direction: column;
+}
+
+.block__column {
+  border: 20px solid #5e5373;
+}
+
+.block__item {
+  background-color: #18b5a4;
+  padding: 30px;
+  font-size: 30px;
+  color: #fff;
+  font-weight: 700;
+}
+
+.column__1 {
+
+}
+
+.column__2 {
+  flex-grow: 1;
+}
+
+.column__3 {
+
+}
+
+.web__page {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  margin: 0 10% auto;
+  width: 80%;
+  background-color: aqua;
+}
+
+.cover__main {
+  flex-grow: 1;
+}
+
+.page__header {
+  display: flex;
+  background-color: gray;
+  justify-content: space-between;
+}
+
+.header__text {
+  margin: 10% 15%;
+}
+
+.header__image {
+  max-width: 70%;
+}
